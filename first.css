@@ -1,0 +1,30 @@
+body {
+    padding: 20px;
+    background-color: rgb(220, 219, 219);
+}
+.container {
+    border-radius: 5px;
+    border-top: rgba(255, 255, 0, 0.898) solid 10px;
+    background-color: white;
+    padding: 40px;
+    height: 100vh;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.head,
+.container button {
+    text-align: center;
+}
+.detail {
+    margin: 40px 0;
+}
+.container button {
+    display: block;
+    margin-top: 30px;
+    background-color: blueviolet;
+    padding: 10px;
+}
+.container button a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
