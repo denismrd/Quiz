@@ -9,13 +9,13 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: rgb(211, 210, 210);
+    background-color: rgb(228, 227, 227);
 }
 
 .main,
 .end {
     height: auto;
-    width: 30%;
+    max-width: 70%;
     position: relative;
     background-color: white;
     padding: 40px;
