@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var dataset = [
         {
-            q: "which one  is the most popular language in 2020?",
+            q: "Which one  is the most popular language in 2020?",
             c: ["Python", "C", "Java", "Javascript"],
             ans: "Python",
         },
@@ -31,21 +31,28 @@ $(document).ready(function () {
     var score = 0;
 
     function buthandler() {
+        console.log("denis");
         quesno++;
         if (quesno === dataset.length + 1) {
             location.reload();
             return;
         }
-        var choosed = $("input:checked");
-
-        if (
-            quesno > 0 &&
-            $('label[for="' + choosed.prop("id") + '"]').text() ===
+        if (quesno > 0 && quesno < 6) {
+            var choosed = $("input:checked");
+            if (choosed.length === 0) {
+                alert("Please choose your answer...");
+                quesno--;
+                return;
+            }
+            if (
+                $('label[for="' + choosed.prop("id") + '"]').text() ===
                 dataset[quesno - 1].ans
-        ) {
-            score++;
+            ) {
+                score++;
+            }
             choosed.prop("checked", false);
         }
+
         if (quesno === dataset.length) {
             $(".main")
                 .addClass("end")
@@ -54,7 +61,7 @@ $(document).ready(function () {
                         score +
                         "/" +
                         dataset.length +
-                        "<br><br>Thank you for attending the Questions !!!</b><br><br><button>Retry</button>"
+                        "<br><br>Thank you for attending the Questions !!!</b><br><br><button style='background-color:rgb(211, 137, 0)'>Retry</button>"
                 );
             $("button").on("click", buthandler);
             return;
@@ -65,7 +72,9 @@ $(document).ready(function () {
             $(labels[i]).text(dataset[quesno].c[i]);
         }
         if (quesno === dataset.length - 1) {
-            $(".main button").text("Submit");
+            let but = document.querySelector(".main button");
+            but.textContent = "Submit";
+            but.style.backgroundColor = "rgb(0, 89, 136)";
         }
     }
 
