@@ -10,8 +10,8 @@ body {
     box-sizing: content-box;
     background-image: linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.85)
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
         ),
         url("https://cutt.ly/RkwjEES");
     background-position: right;
